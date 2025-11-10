@@ -11,16 +11,17 @@ const MONGO_URI = process.env.MONGO_URI;
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch(err => console.log("❌ MongoDB Connection Error:", err));
+  .then(() => console.log(" MongoDB Connected"))
+  .catch(err => console.log(" MongoDB Connection Error:", err));
 
 // Default route
 app.get('/', (req, res) => {
-  res.send('🚀 Food Recipe App Backend Running!');
+  res.send(' Food Recipe App Backend Running!');
 });
 
 // Use Recipe Routes
 app.use('/api/recipes', recipeRoutes);
 
 // Start server
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
